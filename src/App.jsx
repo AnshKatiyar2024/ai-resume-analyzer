@@ -16,8 +16,7 @@ import {
   UserPlus,
   LogOut,
 } from "lucide-react";
-
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://ai-resume-analyzer-qapa.onrender.com";
 
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
@@ -194,7 +193,7 @@ function App() {
       }
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/history",
+        "http://https://ai-resume-analyzer-qapa.onrender.com/history",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -241,7 +240,7 @@ const addHistory = async (item) => {
     const token = localStorage.getItem("resumeAnalyzerToken");
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/history",
+      "http://https://ai-resume-analyzer-qapa.onrender.com/history",
       {
         file_name: item.fileName,
         ats_score: item.atsScore ?? 0,
@@ -290,7 +289,7 @@ const clearHistory = async () => {
     const token = localStorage.getItem("resumeAnalyzerToken");
 
     await axios.delete(
-      "http://127.0.0.1:8000/history",
+      "https://ai-resume-analyzer-qapa.onrender.com/history",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -315,7 +314,7 @@ const clearHistory = async () => {
     const token = localStorage.getItem("resumeAnalyzerToken");
 
     await axios.delete(
-      `http://127.0.0.1:8000/history/${historyId}`,
+      `http://https://ai-resume-analyzer-qapa.onrender.com/history/${historyId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

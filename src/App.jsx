@@ -193,7 +193,7 @@ function App() {
       }
 
       const response = await axios.get(
-        "http://https://ai-resume-analyzer-qapa.onrender.com/history",
+        "https://ai-resume-analyzer-qapa.onrender.com/history",
         {
           headers: {
             Authorization: `Bearer ${token}`,

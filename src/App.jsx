@@ -240,7 +240,7 @@ const addHistory = async (item) => {
     const token = localStorage.getItem("resumeAnalyzerToken");
 
     const response = await axios.post(
-      "http://https://ai-resume-analyzer-qapa.onrender.com/history",
+    "https://ai-resume-analyzer-qapa.onrender.com/history",
       {
         file_name: item.fileName,
         ats_score: item.atsScore ?? 0,
@@ -314,7 +314,7 @@ const clearHistory = async () => {
     const token = localStorage.getItem("resumeAnalyzerToken");
 
     await axios.delete(
-      `http://https://ai-resume-analyzer-qapa.onrender.com/history/${historyId}`,
+      `https://ai-resume-analyzer-qapa.onrender.com/history/${historyId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
